@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio BTS_3.2 - Immagini e Altro</title>
+    <!-- Include Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Include Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+</head>
+<!-- Aggiungo un ID al body per il bookmark link -->
+<body id="inizio">
+
+    <!-- Layout grid sensato (come da BTS_1.2) -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                
+                <h1 class="mb-4">Esercizio BTS_3.2: Jumbotron, Immagini, Alert, Bottoni</h1>
+
+                <!-- 
+                Jumbotron (alternativa BS5) con sfondo bg-info
+                BS5 non ha più il Jumbotron, si emula con padding e classi background.
+                -->
+                <div class="p-5 rounded bg-info text-dark mb-4">
+                    <h2>Jumbotron Alternativo</h2>
+                    <p>Questo componente emula il vecchio Jumbotron di Bootstrap 4. Annuncia il contenuto delle immagini sottostanti.</p>
+                </div>
+
+                <hr class="my-5">
+
+                <!-- 
+                3 Immagini
+                Uso placehold.co per le immagini web.
+                -->
+                <h2 class="mt-4">Immagini con stili diversi</h2>
+
+                <!-- Uso clearfix per contenere i float -->
+                <div class="clearfix border p-3 mb-4">
+                    
+                    <!-- 1. Fluttuante a destra in un cerchio -->
+                    <img src="https://placehold.co/150x150/f06292/ffffff?text=Destra+Cerchio" 
+                         class="rounded-circle float-end m-2" 
+                         alt="Immagine fluttuante a destra in un cerchio" 
+                         width="150" height="150">
+
+                    <!-- 3. Fluttuante a sinistra con bordi arrotondati -->
+                    <!-- Inserisco questa prima della 2 per mostrare meglio i float -->
+                    <img src="https://placehold.co/150x150/4fc3f7/ffffff?text=Sinistra+Arrotondata" 
+                         class="rounded float-start m-2" 
+                         alt="Immagine fluttuante a sinistra con bordi arrotondati" 
+                         width="150" height="150">
+                    
+                    <p>Questo testo si adatta attorno alle immagini flottanti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+                <!-- 2. Centrata in un thumbnail -->
+                <div class="text-center">
+                    <p>Immagine centrata (con <code>.d-block</code> e <code>.mx-auto</code>) e stile thumbnail (<code>.img-thumbnail</code>):</p>
+                    <img src="https://placehold.co/200x200/aed581/ffffff?text=Centrata+Thumbnail" 
+                         class="img-thumbnail d-block mx-auto m-2" 
+                         alt="Immagine centrata in un thumbnail" 
+                         width="200" height="200">
+                </div>
+                
+
+                <hr class="my-5">
+
+                <!-- 
+                Alert 
+                - Sfondo: Success
+                - Link che riporta all'inizio (#inizio)
+                - Chiudibile (dismissible)
+                - Effetto fade
+                -->
+                <h2 class="mt-4">Alert Chiudibile</h2>
+
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Ottimo Lavoro!</strong> Questo è un alert di successo.
+                    <!-- Link bookmark all'ID #inizio del body -->
+                    Puoi <a href="#inizio" class="alert-link">tornare all'inizio della pagina</a>.
+                    
+                    <!-- Bottone di chiusura -->
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+                <hr class="my-5">
+
+                <!-- 
+                Bottoni
+                - Button Outline
+                - Block level button
+                - DropDownMenu in un gruppo di bottoni
+                -->
+                <h2 class="mt-4">Bottoni</h2>
+
+                <!-- 1. Button Outline -->
+                <h3 class="mt-3">Button Outline</h3>
+                <button type="button" class="btn btn-outline-primary m-1">Primary Outline</button>
+                <button type="button" class="btn btn-outline-secondary m-1">Secondary Outline</button>
+                <button type="button" class="btn btn-outline-info m-1">Info Outline</button>
+
+                <!-- 2. Block level button -->
+                <!-- In BS5 si usa un wrapper .d-grid -->
+                <h3 class="mt-4">Block Level Button</h3>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button">Bottone a Blocco (Full-width)</button>
+                </div>
+
+                <!-- 3. DropDownMenu in un gruppo di bottoni -->
+                <h3 class="mt-4">Dropdown in Gruppo Bottoni</h3>
+                <div class="btn-group" role="group" aria-label="Gruppo bottoni con dropdown">
+                    <button type="button" class="btn btn-secondary">Bottone 1</button>
+                    <button type="button" class="btn btn-secondary">Bottone 2</button>
+                    
+                    <!-- Dropdown annidato -->
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <li><a class="dropdown-item" href="#">Link Dropdown 1</a></li>
+                            <li><a class="dropdown-item" href="#">Link Dropdown 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div> <!-- fine col-12 -->
+        </div> <!-- fine row -->
+    </div> <!-- fine container -->
+
+    <!-- Spazio extra in fondo per permettere al link #inizio di funzionare bene -->
+    <div style="height: 100vh;"></div>
+
+</body>
+</html>

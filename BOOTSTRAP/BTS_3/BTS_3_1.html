@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio BTS_3.1 - Tabelle</title>
+    <!-- Include Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Include Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+</head>
+<body>
+
+    <!-- Layout grid sensato (come da BTS_1.2) -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                
+                <h1 class="mb-4">Esercizio BTS_3.1: Tabelle Bootstrap 5</h1>
+
+                <!-- 
+                Tavola 4x4 + intestazione
+                - Intestazione rossa (Danger)
+                - A strisce nere e grigie (table-dark e table-striped)
+                -->
+                <h2 class="mt-4">Tabella 4x4 (Intestazione Danger, Strisce Dark)</h2>
+                <p>Questa tabella utilizza <code>.table</code>, <code>.table-dark</code>, <code>.table-striped</code> e <code>.table-danger</code> per l'intestazione.</p>
+                
+                <table class="table table-dark table-striped">
+                    <!-- Intestazione Rossa (Danger) -->
+                    <thead class="table-danger">
+                        <tr>
+                            <th scope="col">Intestazione 1</th>
+                            <th scope="col">Intestazione 2</th>
+                            <th scope="col">Intestazione 3</th>
+                            <th scope="col">Intestazione 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cella 1.1</td>
+                            <td>Cella 1.2</td>
+                            <td>Cella 1.3</td>
+                            <td>Cella 1.4</td>
+                        </tr>
+                        <tr>
+                            <td>Cella 2.1</td>
+                            <td>Cella 2.2</td>
+                            <td>Cella 2.3</td>
+                            <td>Cella 2.4</td>
+                        </tr>
+                        <tr>
+                            <td>Cella 3.1</td>
+                            <td>Cella 3.2</td>
+                            <td>Cella 3.3</td>
+                            <td>Cella 3.4</td>
+                        </tr>
+                        <tr>
+                            <td>Cella 4.1</td>
+                            <td>Cella 4.2</td>
+                            <td>Cella 4.3</td>
+                            <td>Cella 4.4</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr class="my-5">
+
+                <!-- 
+                Rifai la stessa tabella responsive
+                Per rendere una tabella responsive, la si avvolge
+                in un <div> con classe .table-responsive
+                -->
+                <h2 class="mt-4">Tabella Responsive</h2>
+                <p>Questa è la stessa tabella, ma avvolta in un <code>.table-responsive</code>. Su schermi piccoli, apparirà una barra di scorrimento orizzontale.</p>
+
+                <div class="table-responsive">
+                    <table class="table table-dark table-striped">
+                        <thead class="table-danger">
+                            <tr>
+                                <th scope="col">Intestazione 1</th>
+                                <th scope="col">Intestazione 2</th>
+                                <th scope="col">Intestazione 3</th>
+                                <th scope="col">Intestazione 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cella 1.1</td>
+                                <td>Cella 1.2</td>
+                                <td>Cella 1.3</td>
+                                <td>Cella 1.4</td>
+                            </tr>
+                            <tr>
+                                <td>Cella 2.1</td>
+                                <td>Cella 2.2</td>
+                                <td>Cella 2.3</td>
+                                <td>Cella 2.4</td>
+                            </tr>
+                            <tr>
+                                <td>Cella 3.1</td>
+                                <td>Cella 3.2</td>
+                                <td>Cella 3.3</td>
+                                <td>Cella 3.4</td>
+                            </tr>
+                            <tr>
+                                <td>Cella 4.1</td>
+                                <td>Cella 4.2</td>
+                                <td>Cella 4.3</td>
+                                <td>Cella 4.4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!-- fine .table-responsive -->
+
+            </div> <!-- fine col-12 -->
+        </div> <!-- fine row -->
+    </div> <!-- fine container -->
+
+</body>
+</html>
